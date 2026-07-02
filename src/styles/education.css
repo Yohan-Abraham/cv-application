@@ -1,0 +1,10 @@
+.date-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.education-date {
+  display: flex;
+  flex-direction: column;
+}

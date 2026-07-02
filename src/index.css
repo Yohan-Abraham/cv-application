@@ -24,6 +24,8 @@ input {
 label {
   margin-top: 1em;
   font-weight: 100;
+  font-size: medium;
+  color: grey;
 }
 
 form {

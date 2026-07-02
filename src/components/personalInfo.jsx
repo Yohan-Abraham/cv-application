@@ -47,15 +47,13 @@ export default function PersonalInfo({ personalInfo, handleChange }) {
     );
   } else {
     return (
-      <>
-        <section className="personal">
-          <h2>Personal Details</h2>
-          <h2>Name: {personalInfo.name}</h2>
-          <h2>Email: {personalInfo.email}</h2>
-          <h2>Phone: {personalInfo.phone}</h2>
-          <button onClick={handleEditable}>Edit</button>
-        </section>
-      </>
+      <section className="personal">
+        <h2>Personal Details</h2>
+        <h2>Name: {personalInfo.name}</h2>
+        <h2>Email: {personalInfo.email}</h2>
+        <h2>Phone: {personalInfo.phone}</h2>
+        <button onClick={handleEditable}>Edit</button>
+      </section>
     );
   }
 }

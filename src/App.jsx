@@ -10,17 +10,37 @@ function App() {
     email: '',
     phone: '',
   });
+
+  const [userEducation, setUserEducation] = useState({
+    school: '',
+    location: '',
+    degree: '',
+    startDate: '',
+    endDate: '',
+  });
+
   function handleChange(e) {
     setUserInfo({
       ...userInfo,
       [e.target.name]: e.target.value,
     });
   }
+
+  function handleEducation(e) {
+    setUserEducation({
+      ...userEducation,
+      [e.target.name]: e.target.value,
+    });
+  }
+
   return (
     <div className="app">
       <PersonalInfo personalInfo={userInfo} handleChange={handleChange} />
-      <Education />
-      <Preview personalInfo={userInfo} />
+      <Education
+        educationInfo={userEducation}
+        handleEducation={handleEducation}
+      />
+      <Preview personalInfo={userInfo} education={userEducation} />
     </div>
   );
 }
