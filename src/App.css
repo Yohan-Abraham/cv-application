@@ -1,0 +1,17 @@
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.app section {
+  padding: 2em;
+  background-color: white;
+}
+
+.preview {
+  grid-row: 1/-1;
+  grid-column: 2;
+  box-shadow: 1px 1px 8px grey;
+}
