@@ -1,6 +1,6 @@
 import '../styles/preview.css';
 
-export default function Preview({ personalInfo, education }) {
+export default function Preview({ personalInfo }) {
   return (
     <section className="preview">
       <div className="personal-details">
@@ -12,7 +12,7 @@ export default function Preview({ personalInfo, education }) {
         </div>
       </div>
 
-      <div className="education">
+      {/* <div className="education">
         <h2>Education</h2>
         <hr />
         <div className="education-container">
@@ -33,7 +33,7 @@ export default function Preview({ personalInfo, education }) {
             </i>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

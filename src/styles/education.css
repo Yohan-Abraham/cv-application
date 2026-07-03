@@ -8,3 +8,47 @@
   display: flex;
   flex-direction: column;
 }
+
+.education-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.education-container {
+  display: grid;
+  grid-template-columns: 1fr 72px;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.education-container button {
+  background-color: transparent;
+  color: black;
+  border: none;
+}
+
+.education-button:hover {
+  background-color: lightgrey;
+}
+
+.delete-button:hover {
+  color: red;
+}
+
+.education-container .delete-button {
+  justify-self: end;
+  width: 48px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+}

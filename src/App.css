@@ -1,8 +1,9 @@
 .app {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto auto 1fr;
   gap: 1em;
+  align-items: start;
 }
 
 .app section {
