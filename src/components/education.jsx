@@ -72,7 +72,6 @@ export default function Education({
                     />
                   </div>
                 </div>
-                <button type="submit">submit</button>
               </form>
             </Fragment>
           );
