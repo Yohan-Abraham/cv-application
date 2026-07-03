@@ -1,54 +1,13 @@
 import '../styles/education.css';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 
-export default function Education() {
-  const defaultEducation = {
-    id: crypto.randomUUID(),
-    school: 'New Education',
-    location: '',
-    degree: '',
-    startDate: '',
-    endDate: '',
-    isActive: true,
-  };
-
-  const [educationInfo, setEducationInfo] = useState([defaultEducation]);
-
-  function handleEducation(e, id) {
-    setEducationInfo((prevEducation) =>
-      prevEducation.map((education) => {
-        if (education.id === id) {
-          return { ...education, [e.target.name]: e.target.value };
-        } else {
-          return education;
-        }
-      }),
-    );
-  }
-
-  function handleExpansion(id) {
-    setEducationInfo((prevEducation) =>
-      prevEducation.map((education) =>
-        education.id === id
-          ? { ...education, isActive: !education.isActive }
-          : education,
-      ),
-    );
-  }
-
-  function handleDeleteEducation(id) {
-    setEducationInfo((prevEducation) =>
-      prevEducation.filter((education) => education.id !== id),
-    );
-  }
-
-  function handleNewEducation() {
-    setEducationInfo((prevEducation) => [
-      ...prevEducation,
-      { ...defaultEducation, id: crypto.randomUUID() },
-    ]);
-  }
-
+export default function Education({
+  educationInfo,
+  handleEducation,
+  handleExpansion,
+  handleDeleteEducation,
+  handleNewEducation,
+}) {
   return (
     <section className="education">
       <h2>Education</h2>
@@ -125,7 +84,7 @@ export default function Education() {
                   className="education-button"
                   onClick={() => handleExpansion(education.id)}
                 >
-                  <div> {'>'} </div>
+                  <div> {'v'} </div>
                   <h2>{education.school}</h2>
                 </button>
                 <button

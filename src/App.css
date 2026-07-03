@@ -1,7 +1,7 @@
 .app {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto;
   gap: 1em;
   align-items: start;
 }
