@@ -8,11 +8,11 @@ import { useState } from 'react';
 function App() {
   const defaultEducation = {
     id: crypto.randomUUID(),
-    school: 'New Education',
-    location: '',
-    degree: '',
+    school: 'Arizona State University',
+    location: 'Tempe, Arizona',
+    degree: 'Computer Science',
     startDate: '',
-    endDate: '',
+    endDate: '2028',
     isActive: false,
   };
 
@@ -54,9 +54,9 @@ function App() {
   }
 
   const [userInfo, setUserInfo] = useState({
-    name: '',
-    email: '',
-    phone: '',
+    name: 'Quandle Dingle',
+    email: 'dingle@gmail.com',
+    phone: '111-111-1111',
   });
 
   function handleChange(e) {
@@ -68,10 +68,10 @@ function App() {
 
   const defaultExperience = {
     id: crypto.randomUUID(),
-    company: 'New Experience',
-    location: '',
-    jobTitle: '',
-    startDate: '',
+    company: 'Microsoft',
+    location: 'Vancouver, BC',
+    jobTitle: 'Web Developer',
+    startDate: 'July 2025',
     endDate: '',
     bulletPoints: [
       {
@@ -195,7 +195,11 @@ function App() {
         handleDeleteBullet={handleDeleteBullet}
         handleBulletChange={handleBulletChange}
       />
-      <Preview personalInfo={userInfo} educations={educationInfo} />
+      <Preview
+        personalInfo={userInfo}
+        educations={educationInfo}
+        experiences={experienceInfo}
+      />
     </div>
   );
 }

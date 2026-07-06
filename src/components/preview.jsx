@@ -1,6 +1,6 @@
 import '../styles/preview.css';
 
-export default function Preview({ personalInfo, educations }) {
+export default function Preview({ personalInfo, educations, experiences }) {
   return (
     <section className="preview">
       <div className="personal-details">
@@ -33,6 +33,42 @@ export default function Preview({ personalInfo, educations }) {
                     ? `Expected: ${education.endDate}`
                     : education.endDate}
                 </i>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="experience">
+        <h2>Experience</h2>
+        <hr />
+        {experiences.map((experience) => {
+          return (
+            <div className="experience-preview-container" key={experience.id}>
+              <div className="spaced-between">
+                <h4>{experience.company}</h4>
+                <p>
+                  {experience.startDate}
+                  {experience.startDate == '' || experience.endDate == ''
+                    ? null
+                    : ' - '}
+                  {experience.endDate !== '' && experience.startDate == ''
+                    ? `Expected: ${experience.endDate}`
+                    : experience.endDate}
+                </p>
+              </div>
+
+              <div className="spaced-between">
+                <i>{experience.jobTitle}</i>
+                <i>{experience.location}</i>
+              </div>
+
+              <div className="bullet-points">
+                <ul>
+                  {experience.bulletPoints.map((bullet) => {
+                    return <li key={bullet.id}>{bullet.bulletPoint}</li>;
+                  })}
+                </ul>
               </div>
             </div>
           );

@@ -4,8 +4,13 @@
   align-items: center;
 }
 
-.education-preview-container {
+.education-preview-container,
+.experience-preview-container {
   margin-top: 1em;
+}
+
+.bullet-points {
+  margin: 0.2em 1.2em;
 }
 
 .spaced-between {

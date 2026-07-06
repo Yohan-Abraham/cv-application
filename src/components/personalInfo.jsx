@@ -16,7 +16,6 @@ export default function PersonalInfo({ personalInfo, handleChange }) {
           <label>Name</label>
           <input
             type="text"
-            placeholder="Yohan Quraishy"
             value={personalInfo.name}
             name="name"
             onChange={handleChange}
@@ -26,7 +25,6 @@ export default function PersonalInfo({ personalInfo, handleChange }) {
           <input
             type="email"
             name="email"
-            placeholder="yohan@email.com"
             value={personalInfo.email}
             onChange={handleChange}
           ></input>
@@ -35,7 +33,6 @@ export default function PersonalInfo({ personalInfo, handleChange }) {
           <input
             type="text"
             name="phone"
-            placeholder="111-111-1111"
             value={personalInfo.phone}
             onChange={handleChange}
           ></input>
