@@ -1,0 +1,24 @@
+.bullet-point-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.bullet-point-container div {
+  display: flex;
+  align-items: end;
+  gap: 2em;
+}
+
+.bullet {
+  min-width: 90%;
+}
+
+.delete-bullet {
+  background-color: transparent;
+  color: black;
+  border: none;
+}
+
+.delete-bullet:hover {
+  color: red;
+}

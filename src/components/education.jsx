@@ -20,7 +20,7 @@ export default function Education({
                   className="education-button"
                   onClick={() => handleExpansion(education.id)}
                 >
-                  <div> {'>'} </div>
+                  <div> {'v'} </div>
                   <h2>{education.school}</h2>
                 </button>
                 <button
@@ -83,7 +83,7 @@ export default function Education({
                   className="education-button"
                   onClick={() => handleExpansion(education.id)}
                 >
-                  <div> {'v'} </div>
+                  <div> {'>'} </div>
                   <h2>{education.school}</h2>
                 </button>
                 <button
